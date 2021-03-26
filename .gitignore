@@ -11,6 +11,9 @@
 # production
 /build
 
+./truffle-config.js
+/src/abis
+
 # misc
 .DS_Store
 .env.local
