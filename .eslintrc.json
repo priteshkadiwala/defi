@@ -1,0 +1,54 @@
+{
+	"extends": ["airbnb", "prettier"],
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": ["error", { "singleQuote": true }],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		// Enforces files extentions in import statements except from when npm packages are imported
+		"import/extensions": [
+			"error",
+			"always",
+			{
+				"ignorePackages": true
+			}
+		],
+		// Allows the max length on a line to be 120 chars
+		"max-len": [
+			"error",
+			{
+				"code": 120
+			}
+		],
+		// Tracks the package.json file in the root folder
+		"import/no-extraneous-dependencies": [
+			"error",
+			{ "devDependencies": true, "packageDir": "./" }
+		],
+		// Allows the use of '@' in import statements
+		"import/no-unresolved": "off",
+		"no-unused-vars": "off",
+		"no-const-assign": "off",
+		"no-restricted-globals": "off",
+		"no-console": "off",
+		"react/no-unescaped-entities": "off",
+		"jsx-a11y/interactive-supports-focus": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/prop-types": "off",
+		"no-underscore-dangle": "off",
+		"no-alert": "off",
+
+		"prefer-destructuring": ["error", { "object": false, "array": false }],
+
+		"react/jsx-one-expression-per-line": "off",
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": ["Link"],
+				"specialLink": ["hrefLeft", "hrefRight"],
+				"aspects": ["invalidHref", "preferButton"]
+			}
+		]
+	}
+}
